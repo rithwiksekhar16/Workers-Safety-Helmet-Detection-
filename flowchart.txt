@@ -1,0 +1,42 @@
+Notebook
+---------
+1. Importing the packages
+2. Exploring the dataset 
+	- Reading the image
+	- plotting the image
+3. Image Processing
+	- converting to blob object
+	- defining the class
+	- declaring the bounding box
+	- convert the array to a numpy array
+4. Loading the pre-trained model
+	- reading the network layers
+	- extract the output layers
+5. Image processing
+	- appending the image - annotation file and images
+	- converting bgr to rgb
+	- creating the mask
+	- resizing the image
+6. Data Augmentation
+	- randoming the image
+	- rotating the image
+	- transforming the image
+
+7. Installing the packages required for yolov5 in Colab
+8. Processing the Data based on yolov5 model
+9. Building the model in colab
+	- YOLOV5
+	- FasterRcnn
+11. Training the model
+12. Building the model with YOLOv5
+
+Flask Framework
+----------------
+
+13. Flask Framework with Sqlite for signup and signin
+14. User gives input as Image or Video
+15. The given input preprocessed and with trained model is used for detecting the license plate 
+16. The segmented each object and put bounding box 
+17. Final outcome is displayed
+
+
