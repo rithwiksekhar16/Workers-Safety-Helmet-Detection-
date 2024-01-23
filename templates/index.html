@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Form</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <link href="static/assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONT AWESOME ICON STYLE  -->
+    <link href="static/assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- PRETTYPHOTO STYLE  -->
+    <link href="static/assets/css/prettyPhoto.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="static/assets/css/style.css" rel="stylesheet" />
+    <!-- CUSTOM THEME COLOR -- YOU CAN USE LIGHT & DARK THEMES  -->
+    <link href="static/assets/css/themes/dark.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top scrollclass">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    
+                    
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/notebook">Notebook</a></li>
+                    
+                    <li><a href="/login">Signout</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--END NAB BAR SECTION-->
+    <div id="home-sec">
+        <div class="overlay">
+            <div class="container">
+                <div class="col-md-8 pad-top scrollclass">
+
+                    <h1> 
+                        <strong>A Deep Learning-Based Method To Detect Safety Helmet Wearing At A Satisfactory Accuracy With High Detection Speed</strong>
+                    </h1>
+                    <p class="home-p">
+                        Wearing safety helmets can effectively protect workers safety on construction sites. However, workers often take off the helmets because of weak security-conscious and discomfort, then hidden dangers will be brought by this behaviour. Workers without safety helmets will suffer more injuries in accidents such as falling human body and vertical falling matter.
+                    </p>
+                    <a class="btn btn-primary btn-lg btn-home" href="#features-sec">Explore More &nbsp; <i class="fa fa-toggle-on"></i></a>
+                </div>
+                <div class="col-md-4 img-home-side ">
+                    <img src="static/assets/img/home-side.png" class="img-responsive" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--END HOME SECTION-->
+    <!--END HOME SECTION-->
+    <section id="features-sec">
+        <div class="container">
+            <div class="row text-center min-set">
+                <div class="col-md-12">
+                    <h2><mark class="head-glow"></mark>FORM </h2>
+                    <hr class="sub-hr" />
+                </div>
+            </div>
+            <div class="row">
+    
+    <form class="form-signin" action="/predict" method=post enctype=multipart/form-data>
+        <h1 class="h3 mb-3 font-weight-normal">Upload any image</h1>
+        <input type="file" name="file" class="form-control-file" id="inputfile">
+        <br/>
+        <button style="width: 500px;" class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+        
+    </form>
+    <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $('#inputfile').bind('change', function() {
+          let fileSize = this.files[0].size/1024/1024; // this gives in MB
+          if (fileSize > 10) {
+            $("#inputfile").val(null);
+            alert('file is too big. images more than 10MB are not allowed')
+            return
+          }
+
+          let ext = $('#inputfile').val().split('.').pop().toLowerCase();
+          if($.inArray(ext, ['jpg','jpeg','png']) == -1) {
+            $("#inputfile").val(null);
+            alert('only jpeg/jpg files are allowed!');
+          }
+      });
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+
+
+  <body>
+   
+    <div>
+      
+      
+
+<img src="{{ url_for('video') }}" width="80%" />
+
+
+        
+</div>
+
+</div>
+</section>
+<!--END FEATURES SECTION-->
+
+<section id="location-sec">
+<div class="container">
+    
+    <div class="row">
+
+        <div class="col-md-12 text-center">
+          
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- END LOCATION  SECTION -->
+<!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+<!-- CORE JQUERY  -->
+<script src="static/assets/js/jquery-1.11.1.js"></script>
+<!-- BOOTSTRAP SCRIPTS  -->
+<script src="static/assets/js/bootstrap.js"></script>
+<!-- PRETTYPHOTO SCRIPTS -->
+<script src="static/assets/js/jquery.prettyPhoto.js"></script>
+<!-- PORTFOLIO FILTER PLUGIN  -->
+<script src="static/assets/js/jquery.mixitup.min.js"></script>
+<!-- NICE SCROLL SCRIPTS   -->
+<script src="static/assets/js/jquery.nicescroll.min.js"></script>
+<!-- EASING SCROLL SCRIPTS   -->
+<script src="static/assets/js/jquery.easing.min.js"></script>
+<!-- CUSTOM SCRIPTS  -->
+<script src="static/assets/js/custom.js"></script>
+
+</body>
+</html>

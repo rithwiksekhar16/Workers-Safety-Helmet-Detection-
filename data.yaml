@@ -1,0 +1,5 @@
+train: /content/drive/MyDrive/helmet/train/images
+val: /content/drive/MyDrive/helmet/valid/images
+
+nc: 3
+names: ['head', 'helmet', 'person']
